@@ -135,9 +135,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="zd4-33-Vd5">
-                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="TIr-Rj-TDm"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="tEX-LS-Spg"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="TIr-Rj-TDm">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="Mhu-6f-dre" id="1xk-Tt-WrK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="tEX-LS-Spg">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Mhu-6f-dre" id="JC4-6V-rG8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="taskDueTextField" destination="4y1-We-EBo" id="5KK-9k-eBp"/>
+                        <outlet property="taskNameTextField" destination="IMR-tu-jCB" id="0Fy-1J-j9n"/>
+                        <outlet property="taskNotesTextView" destination="3BW-MC-M0h" id="F18-fx-XzE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31G-0s-Upx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
